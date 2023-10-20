@@ -1,4 +1,4 @@
-<h1>InventarioViewer</h1>
+<H1>InventarioViewer</H1>
         <p>Tu solución definitiva para la visualización y gestión de inventarios y stocks.</p>
     <br/>
         <h2>Descripción</h2>
