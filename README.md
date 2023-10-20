@@ -1,4 +1,4 @@
-<H1>InventarioViewer<H1/>
+<H1>InventarioViewer</H1>
 
 Descripción: 
 
