@@ -7,8 +7,8 @@
     
         <h2>Características Destacadas</h2>
         
-            -Visualización en Tiempo Real: Accede a datos precisos y actualizados de tus inventarios y stocks con solo unos clics.
-            -Gestión Integral: Controla tus productos, categorías, ubicaciones y más con facilidad, lo que te permite optimizar tus operaciones.
+           <P> -Visualización en Tiempo Real: Accede a datos precisos y actualizados de tus inventarios y stocks con solo unos clics. </P>
+           <P> -Gestión Integral: Controla tus productos, categorías, ubicaciones y más con facilidad, lo que te permite optimizar tus operaciones.</P>
             -Alertas y Notificaciones: Configura alertas personalizadas para saber cuándo un producto está por agotarse o cuándo alcanza niveles críticos.
             -Historial y Reportes:</strong> Genera informes detallados y realiza un seguimiento del historial de inventario para tomar decisiones informadas.
             -Fácil Integración: InventarioViewer se integra sin problemas con tus sistemas existentes para una experiencia de uso perfecta.
