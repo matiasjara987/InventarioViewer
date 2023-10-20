@@ -3,7 +3,7 @@ Título del Proyecto: InventarioViewer
 Descripción: 
 
 Bienvenido al repositorio de InventarioViewer, tu solución definitiva para la visualización y gestión de inventarios y stocks. Este proyecto se ha creado con la misión de facilitar el control y seguimiento de productos y existencias en tiempo real. Con InventarioViewer, puedes disfrutar de una interfaz intuitiva y potentes funciones para asegurarte de que nunca te quedes sin productos críticos ni desperdicies recursos en exceso de inventario.
-
+------------------------------------------------------------------------------------------------------------
 Características Destacadas:
 
 Visualización en Tiempo Real: Accede a datos precisos y actualizados de tus inventarios y stocks con solo unos clics.
