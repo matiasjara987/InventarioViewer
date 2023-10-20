@@ -12,9 +12,9 @@
             <P>-Fácil Integración: InventarioViewer se integra sin problemas con tus sistemas existentes para una experiencia de uso perfecta. </P>
           </br>
     <h2>¿Cómo Empezar?</h2>
-            1.Clona este repositorio en tu máquina local.
-            2.Sigue las instrucciones de instalación en el archivo <code>README.md</code> para configurar el proyecto.
-            3.Explora y personaliza InventarioViewer para satisfacer tus necesidades específicas.
+            <P>1.Clona este repositorio en tu máquina local.</P>
+           <P> 2.Sigue las instrucciones de instalación en el archivo <code>README.md</code> para configurar el proyecto. </P>
+            <P>3.Explora y personaliza InventarioViewer para satisfacer tus necesidades específicas. </P>
         
   
 
