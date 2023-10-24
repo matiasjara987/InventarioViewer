@@ -2,7 +2,7 @@
         <p>Tu solución definitiva para la visualización y gestión de inventarios y stocks.</p>
     <br/>
 
-    ![image](https://github.com/matiasjara987/InventarioViewer/assets/139058505/e64e0d1c-b665-4b39-8000-f91cfc8bd14d)
+    
 
         <h2>Descripción</h2>
         <p>Este proyecto se ha creado con la misión de facilitar el control y seguimiento de productos y existencias en tiempo real. Con InventarioViewer, puedes disfrutar de una interfaz intuitiva y potentes funciones para asegurarte de que nunca te quedes sin productos críticos ni desperdicies recursos en exceso de inventario.</p>
