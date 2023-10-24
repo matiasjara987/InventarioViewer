@@ -1,9 +1,6 @@
 <H1>InventarioViewer</H1>
         <p>Tu solución definitiva para la visualización y gestión de inventarios y stocks.</p>
     <br/>
-
-    
-
         <h2>Descripción</h2>
         <p>Este proyecto se ha creado con la misión de facilitar el control y seguimiento de productos y existencias en tiempo real. Con InventarioViewer, puedes disfrutar de una interfaz intuitiva y potentes funciones para asegurarte de que nunca te quedes sin productos críticos ni desperdicies recursos en exceso de inventario.</p>
 <br/>
