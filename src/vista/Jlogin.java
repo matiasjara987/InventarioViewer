@@ -125,8 +125,8 @@ public class Jlogin extends javax.swing.JFrame {
         }else{
         v= vdo.ValidarVendedor(usuario, pass);
         if(v.getUsuario() != null && v.getPass() != null) {
-        Principal p = new Principal();
-        p.setVisible(true);
+         //Principal p = new Principal();
+        //p.setVisible(true);
         this.dispose();
         }else {
         JOptionPane.showMessageDialog(this, "Debe ingrear usuarios validos");
