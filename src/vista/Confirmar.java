@@ -101,8 +101,8 @@ public class Confirmar extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_loginActionPerformed
 
     private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
-        CrearUser cruser = new CrearUser();
-        cruser.setVisible(true);
+        Crear cr = new Crear();
+        cr.setVisible(true);
         this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_atrasActionPerformed

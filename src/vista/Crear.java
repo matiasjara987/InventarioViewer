@@ -26,12 +26,17 @@ public class Crear extends javax.swing.JFrame {
         header1 = new javax.swing.JLabel();
         fieldemail = new diseño.JERoundTextField();
         fieldNombre = new diseño.JERoundTextField();
-        jLabel1 = new javax.swing.JLabel();
-        fieldApellido = new diseño.JERoundTextField();
-        jLabel2 = new javax.swing.JLabel();
         fieldrut = new diseño.JERoundTextField();
         btn_sig = new diseño.Boton();
         btn_atras = new diseño.Boton();
+        fieldApellido1 = new diseño.JERoundTextField();
+        jLabel1 = new javax.swing.JLabel();
+        fieldusername = new diseño.JERoundTextField();
+        fieldApellido2 = new diseño.JERoundTextField();
+        dieldpass1 = new diseño.JERoundPassField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        dieldpass2 = new diseño.JERoundPassField();
         boximg = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
 
@@ -71,7 +76,7 @@ public class Crear extends javax.swing.JFrame {
 
         fieldNombre.setBackground(new java.awt.Color(217, 217, 217));
         fieldNombre.setForeground(new java.awt.Color(0, 0, 0));
-        fieldNombre.setText("Nombres");
+        fieldNombre.setText("Nombre");
         fieldNombre.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         fieldNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
         fieldNombre.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -84,32 +89,6 @@ public class Crear extends javax.swing.JFrame {
                 fieldNombreActionPerformed(evt);
             }
         });
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Datos Personales");
-
-        fieldApellido.setBackground(new java.awt.Color(217, 217, 217));
-        fieldApellido.setForeground(new java.awt.Color(0, 0, 0));
-        fieldApellido.setText("Apellidos");
-        fieldApellido.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldApellido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        fieldApellido.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldApellidoMouseClicked(evt);
-            }
-        });
-        fieldApellido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldApellidoActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Correo Electrónico");
 
         fieldrut.setBackground(new java.awt.Color(217, 217, 217));
         fieldrut.setForeground(new java.awt.Color(0, 0, 0));
@@ -147,72 +126,184 @@ public class Crear extends javax.swing.JFrame {
             }
         });
 
+        fieldApellido1.setBackground(new java.awt.Color(217, 217, 217));
+        fieldApellido1.setForeground(new java.awt.Color(0, 0, 0));
+        fieldApellido1.setText("Apellidos");
+        fieldApellido1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        fieldApellido1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        fieldApellido1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fieldApellido1MouseClicked(evt);
+            }
+        });
+        fieldApellido1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldApellido1ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Datos Personales");
+
+        fieldusername.setBackground(new java.awt.Color(217, 217, 217));
+        fieldusername.setForeground(new java.awt.Color(0, 0, 0));
+        fieldusername.setText("Username");
+        fieldusername.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        fieldusername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        fieldusername.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fieldusernameMouseClicked(evt);
+            }
+        });
+        fieldusername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldusernameActionPerformed(evt);
+            }
+        });
+
+        fieldApellido2.setBackground(new java.awt.Color(217, 217, 217));
+        fieldApellido2.setForeground(new java.awt.Color(0, 0, 0));
+        fieldApellido2.setText("Apellidos");
+        fieldApellido2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        fieldApellido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        fieldApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fieldApellido2MouseClicked(evt);
+            }
+        });
+        fieldApellido2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldApellido2ActionPerformed(evt);
+            }
+        });
+
+        dieldpass1.setBackground(new java.awt.Color(204, 204, 204));
+        dieldpass1.setForeground(new java.awt.Color(0, 0, 0));
+        dieldpass1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        dieldpass1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
+        dieldpass1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dieldpass1MouseClicked(evt);
+            }
+        });
+        dieldpass1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dieldpass1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Crear Contraseña");
+
+        jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Confirmar Contraseña");
+
+        dieldpass2.setBackground(new java.awt.Color(204, 204, 204));
+        dieldpass2.setForeground(new java.awt.Color(0, 0, 0));
+        dieldpass2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        dieldpass2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
+        dieldpass2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dieldpass2MouseClicked(evt);
+            }
+        });
+        dieldpass2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dieldpass2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(creacuenta)
-                        .addGap(111, 111, 111))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(header1)
-                        .addGap(98, 98, 98))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fieldrut, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(creacuenta)
+                                .addGap(13, 13, 13))
+                            .addComponent(header1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fieldusername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(fieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(fieldApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fieldNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(fieldrut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(fieldemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jLabel1))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jLabel2)))
-                                .addGap(173, 173, 173))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(67, 67, 67)
-                                .addComponent(btn_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(fieldemail, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 71, Short.MAX_VALUE))
+                                        .addGap(15, 15, 15)
+                                        .addComponent(dieldpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4))
+                                .addGap(48, 48, 48))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(btn_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(146, 146, 146)
+                        .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel2)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(creacuenta)
+                .addComponent(creacuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(header1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldApellido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldrut, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldemail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fieldrut, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addComponent(fieldusername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
                 .addComponent(jLabel2)
+                .addGap(1, 1, 1)
+                .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldemail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addComponent(jLabel4)
+                .addGap(1, 1, 1)
+                .addComponent(dieldpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addComponent(btn_atras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36))
         );
 
-        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 400, 510));
+        bg.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 460, 510));
 
         boximg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/box_1.png"))); // NOI18N
         boximg.setText("jLabel1");
@@ -221,7 +312,7 @@ public class Crear extends javax.swing.JFrame {
 
         bgfont.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg.jpg"))); // NOI18N
         bgfont.setText("jLabel1");
-        bg.add(bgfont, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 544, 510));
+        bg.add(bgfont, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 510));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -247,17 +338,13 @@ public class Crear extends javax.swing.JFrame {
         
     }//GEN-LAST:event_fieldNombreActionPerformed
 
-    private void fieldApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellidoActionPerformed
-
     private void fieldrutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldrutActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldrutActionPerformed
 
     private void btn_sigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sigActionPerformed
-        CrearUser crus = new CrearUser();
-        crus.setVisible(true);
+       Confirmar cr = new Confirmar();
+       cr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btn_sigActionPerformed
 
@@ -265,11 +352,6 @@ public class Crear extends javax.swing.JFrame {
         fieldNombre.setText("");
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldNombreMouseClicked
-
-    private void fieldApellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldApellidoMouseClicked
-        fieldApellido.setText("");
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellidoMouseClicked
 
     private void fieldrutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldrutMouseClicked
         fieldrut.setText("");
@@ -288,6 +370,47 @@ public class Crear extends javax.swing.JFrame {
  // TODO add your handling code here:
     }//GEN-LAST:event_btn_atrasActionPerformed
 
+    private void fieldApellido1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldApellido1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldApellido1MouseClicked
+
+    private void fieldApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellido1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldApellido1ActionPerformed
+
+    private void fieldusernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldusernameMouseClicked
+        fieldusername.setText("");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldusernameMouseClicked
+
+    private void fieldusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldusernameActionPerformed
+
+    }//GEN-LAST:event_fieldusernameActionPerformed
+
+    private void fieldApellido2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldApellido2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldApellido2MouseClicked
+
+    private void fieldApellido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellido2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldApellido2ActionPerformed
+
+    private void dieldpass1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dieldpass1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpass1MouseClicked
+
+    private void dieldpass1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dieldpass1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpass1ActionPerformed
+
+    private void dieldpass2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dieldpass2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpass2MouseClicked
+
+    private void dieldpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dieldpass2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpass2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
@@ -295,13 +418,18 @@ public class Crear extends javax.swing.JFrame {
     private diseño.Boton btn_atras;
     private diseño.Boton btn_sig;
     private javax.swing.JLabel creacuenta;
-    private diseño.JERoundTextField fieldApellido;
+    private diseño.JERoundPassField dieldpass1;
+    private diseño.JERoundPassField dieldpass2;
+    private diseño.JERoundTextField fieldApellido1;
+    private diseño.JERoundTextField fieldApellido2;
     private diseño.JERoundTextField fieldNombre;
     private diseño.JERoundTextField fieldemail;
     private diseño.JERoundTextField fieldrut;
+    private diseño.JERoundTextField fieldusername;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

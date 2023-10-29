@@ -12,6 +12,7 @@ public class Logeo extends javax.swing.JFrame {
          this.setLocationRelativeTo(this);
          rsscalelabel.RSScaleLabel.setScaleLabel(boximg, "src/img/box_1.png");
      JTextField field = new TextField(15);
+     this.OCULTAR.setVisible(false);
      
     this.add(field);
     this.setVisible(true);
@@ -30,6 +31,8 @@ public class Logeo extends javax.swing.JFrame {
         header1 = new javax.swing.JLabel();
         btn_login = new diseño.Boton();
         dieldpass = new diseño.JERoundPassField();
+        VER = new javax.swing.JLabel();
+        OCULTAR = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,6 +125,22 @@ public class Logeo extends javax.swing.JFrame {
         });
         bg.add(dieldpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 280, 40));
 
+        VER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ver.png"))); // NOI18N
+        VER.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VERMouseClicked(evt);
+            }
+        });
+        bg.add(VER, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 30, 20));
+
+        OCULTAR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/oculto.png"))); // NOI18N
+        OCULTAR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OCULTARMouseClicked(evt);
+            }
+        });
+        bg.add(OCULTAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 30, 20));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -170,7 +189,24 @@ public class Logeo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dieldpassMouseClicked
 
+    private void VERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERMouseClicked
+        VER.setVisible(false);
+        OCULTAR.setVisible(true);
+        dieldpass.setEchoChar((char)0);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VERMouseClicked
+
+    private void OCULTARMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTARMouseClicked
+        VER.setVisible(true);
+        OCULTAR.setVisible(false);
+        dieldpass.setEchoChar('*');
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OCULTARMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel OCULTAR;
+    private javax.swing.JLabel VER;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private diseño.Boton boton1;
