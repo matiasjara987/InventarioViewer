@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.TextField;
+import diseño.TextField;
 import javax.swing.JTextField;
 
 
@@ -24,11 +24,11 @@ public class CrearUser extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         creacuenta = new javax.swing.JLabel();
         header1 = new javax.swing.JLabel();
-        fieldusername = new controlador.JERoundTextField();
+        fieldusername = new diseño.JERoundTextField();
         jLabel1 = new javax.swing.JLabel();
-        btn_sig = new controlador.Boton();
-        btn_atras = new controlador.Boton();
-        dieldpass = new controlador.JERoundPassField();
+        btn_sig = new diseño.Boton();
+        btn_atras = new diseño.Boton();
+        dieldpass = new diseño.JERoundPassField();
         boximg = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
 
@@ -217,11 +217,11 @@ public class CrearUser extends javax.swing.JFrame {
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private javax.swing.JLabel boximg;
-    private controlador.Boton btn_atras;
-    private controlador.Boton btn_sig;
+    private diseño.Boton btn_atras;
+    private diseño.Boton btn_sig;
     private javax.swing.JLabel creacuenta;
-    private controlador.JERoundPassField dieldpass;
-    private controlador.JERoundTextField fieldusername;
+    private diseño.JERoundPassField dieldpass;
+    private diseño.JERoundTextField fieldusername;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.TextField;
+import diseño.TextField;
 import javax.swing.JTextField;
 
 
@@ -25,8 +25,8 @@ public class Confirmar extends javax.swing.JFrame {
         txtLOGIN = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
         header1 = new javax.swing.JLabel();
-        btn_login = new controlador.Boton();
-        btn_atras = new controlador.Boton();
+        btn_login = new diseño.Boton();
+        btn_atras = new diseño.Boton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,8 +111,8 @@ public class Confirmar extends javax.swing.JFrame {
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private javax.swing.JLabel boximg;
-    private controlador.Boton btn_atras;
-    private controlador.Boton btn_login;
+    private diseño.Boton btn_atras;
+    private diseño.Boton btn_login;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel txtLOGIN;
     // End of variables declaration//GEN-END:variables

@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.TextField;
+import diseño.TextField;
 import javax.swing.JTextField;
 
 
@@ -24,14 +24,14 @@ public class Crear extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         creacuenta = new javax.swing.JLabel();
         header1 = new javax.swing.JLabel();
-        fieldemail = new controlador.JERoundTextField();
-        fieldNombre = new controlador.JERoundTextField();
+        fieldemail = new diseño.JERoundTextField();
+        fieldNombre = new diseño.JERoundTextField();
         jLabel1 = new javax.swing.JLabel();
-        fieldApellido = new controlador.JERoundTextField();
+        fieldApellido = new diseño.JERoundTextField();
         jLabel2 = new javax.swing.JLabel();
-        fieldrut = new controlador.JERoundTextField();
-        btn_sig = new controlador.Boton();
-        btn_atras = new controlador.Boton();
+        fieldrut = new diseño.JERoundTextField();
+        btn_sig = new diseño.Boton();
+        btn_atras = new diseño.Boton();
         boximg = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
 
@@ -292,13 +292,13 @@ public class Crear extends javax.swing.JFrame {
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private javax.swing.JLabel boximg;
-    private controlador.Boton btn_atras;
-    private controlador.Boton btn_sig;
+    private diseño.Boton btn_atras;
+    private diseño.Boton btn_sig;
     private javax.swing.JLabel creacuenta;
-    private controlador.JERoundTextField fieldApellido;
-    private controlador.JERoundTextField fieldNombre;
-    private controlador.JERoundTextField fieldemail;
-    private controlador.JERoundTextField fieldrut;
+    private diseño.JERoundTextField fieldApellido;
+    private diseño.JERoundTextField fieldNombre;
+    private diseño.JERoundTextField fieldemail;
+    private diseño.JERoundTextField fieldrut;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

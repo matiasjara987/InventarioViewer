@@ -1,4 +1,4 @@
-package controlador;
+package diseño;
 
 import java.awt.Color;
 import java.awt.Graphics;

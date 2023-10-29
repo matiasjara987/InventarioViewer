@@ -1,6 +1,6 @@
 package vista;
 
-import controlador.TextField;
+import diseño.TextField;
 import javax.swing.JTextField;
 
 
@@ -25,11 +25,11 @@ public class Logeo extends javax.swing.JFrame {
         txtLOGIN = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
         header = new javax.swing.JLabel();
-        fielduser = new controlador.JERoundTextField();
-        boton1 = new controlador.Boton();
+        fielduser = new diseño.JERoundTextField();
+        boton1 = new diseño.Boton();
         header1 = new javax.swing.JLabel();
-        btn_login = new controlador.Boton();
-        dieldpass = new controlador.JERoundPassField();
+        btn_login = new diseño.Boton();
+        dieldpass = new diseño.JERoundPassField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -173,11 +173,11 @@ public class Logeo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
-    private controlador.Boton boton1;
+    private diseño.Boton boton1;
     private javax.swing.JLabel boximg;
-    private controlador.Boton btn_login;
-    private controlador.JERoundPassField dieldpass;
-    private controlador.JERoundTextField fielduser;
+    private diseño.Boton btn_login;
+    private diseño.JERoundPassField dieldpass;
+    private diseño.JERoundTextField fielduser;
     private javax.swing.JLabel header;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel txtLOGIN;

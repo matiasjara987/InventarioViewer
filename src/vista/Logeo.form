@@ -118,7 +118,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="controlador.JERoundTextField" name="fielduser">
+        <Component class="diseño.JERoundTextField" name="fielduser">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -144,7 +144,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="controlador.Boton" name="boton1">
+        <Component class="diseño.Boton" name="boton1">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -186,7 +186,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="controlador.Boton" name="btn_login">
+        <Component class="diseño.Boton" name="btn_login">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -209,7 +209,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="controlador.JERoundPassField" name="dieldpass">
+        <Component class="diseño.JERoundPassField" name="dieldpass">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>

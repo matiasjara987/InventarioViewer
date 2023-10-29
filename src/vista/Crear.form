@@ -173,7 +173,7 @@
                 <Property name="text" type="java.lang.String" value="Bienvenido a Tu Inventario Viewer"/>
               </Properties>
             </Component>
-            <Component class="controlador.JERoundTextField" name="fieldemail">
+            <Component class="diseño.JERoundTextField" name="fieldemail">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -194,7 +194,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldemailActionPerformed"/>
               </Events>
             </Component>
-            <Component class="controlador.JERoundTextField" name="fieldNombre">
+            <Component class="diseño.JERoundTextField" name="fieldNombre">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -229,7 +229,7 @@
                 <Property name="text" type="java.lang.String" value="Datos Personales"/>
               </Properties>
             </Component>
-            <Component class="controlador.JERoundTextField" name="fieldApellido">
+            <Component class="diseño.JERoundTextField" name="fieldApellido">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -264,7 +264,7 @@
                 <Property name="text" type="java.lang.String" value="Correo Electr&#xf3;nico"/>
               </Properties>
             </Component>
-            <Component class="controlador.JERoundTextField" name="fieldrut">
+            <Component class="diseño.JERoundTextField" name="fieldrut">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="d9" green="d9" red="d9" type="rgb"/>
@@ -285,7 +285,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldrutActionPerformed"/>
               </Events>
             </Component>
-            <Component class="controlador.Boton" name="btn_sig">
+            <Component class="diseño.Boton" name="btn_sig">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="1d" green="b8" red="ff" type="rgb"/>
@@ -302,7 +302,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_sigActionPerformed"/>
               </Events>
             </Component>
-            <Component class="controlador.Boton" name="btn_atras">
+            <Component class="diseño.Boton" name="btn_atras">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="1d" green="b8" red="ff" type="rgb"/>
