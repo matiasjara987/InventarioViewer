@@ -1,6 +1,5 @@
 package test;
 
-import vista.Jlogin;
 import vista.Logeo;
 
 public class Main {

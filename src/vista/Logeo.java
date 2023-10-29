@@ -16,7 +16,7 @@ public class Logeo extends javax.swing.JFrame {
     this.add(field);
     this.setVisible(true);
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -25,11 +25,11 @@ public class Logeo extends javax.swing.JFrame {
         txtLOGIN = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
         header = new javax.swing.JLabel();
-        jERoundTextField1 = new controlador.JERoundTextField();
-        jERoundTextField2 = new controlador.JERoundTextField();
+        fielduser = new controlador.JERoundTextField();
         boton1 = new controlador.Boton();
         header1 = new javax.swing.JLabel();
-        boton2 = new controlador.Boton();
+        btn_login = new controlador.Boton();
+        dieldpass = new controlador.JERoundPassField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,38 +53,31 @@ public class Logeo extends javax.swing.JFrame {
         bg.add(bgfont, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 560, 510));
 
         header.setBackground(new java.awt.Color(255, 255, 255));
-        header.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        header.setFont(new java.awt.Font("Poppins Light", 0, 16)); // NOI18N
         header.setForeground(new java.awt.Color(0, 0, 0));
         header.setText("No tienes usuario? Puedes");
-        bg.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+        bg.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
-        jERoundTextField1.setBackground(new java.awt.Color(217, 217, 217));
-        jERoundTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jERoundTextField1.setText("Password");
-        jERoundTextField1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        jERoundTextField1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
-        jERoundTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jERoundTextField1ActionPerformed(evt);
+        fielduser.setBackground(new java.awt.Color(217, 217, 217));
+        fielduser.setForeground(new java.awt.Color(0, 0, 0));
+        fielduser.setText("Username");
+        fielduser.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        fielduser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        fielduser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fielduserMouseClicked(evt);
             }
         });
-        bg.add(jERoundTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 280, 40));
-
-        jERoundTextField2.setBackground(new java.awt.Color(217, 217, 217));
-        jERoundTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        jERoundTextField2.setText("Username");
-        jERoundTextField2.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
-        jERoundTextField2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        jERoundTextField2.addActionListener(new java.awt.event.ActionListener() {
+        fielduser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jERoundTextField2ActionPerformed(evt);
+                fielduserActionPerformed(evt);
             }
         });
-        bg.add(jERoundTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 280, 40));
+        bg.add(fielduser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 280, 40));
 
         boton1.setForeground(new java.awt.Color(255, 255, 255));
         boton1.setText("Crear Cuenta");
-        boton1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
+        boton1.setFont(new java.awt.Font("Poppins Light", 0, 15)); // NOI18N
         boton1.setPreferredSize(new java.awt.Dimension(82, 33));
         boton1.setRadius(20);
         boton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +85,7 @@ public class Logeo extends javax.swing.JFrame {
                 boton1ActionPerformed(evt);
             }
         });
-        bg.add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 130, 20));
+        bg.add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 140, 30));
 
         header1.setBackground(new java.awt.Color(255, 255, 255));
         header1.setFont(new java.awt.Font("Poppins Light", 0, 12)); // NOI18N
@@ -100,17 +93,34 @@ public class Logeo extends javax.swing.JFrame {
         header1.setText("Bienvenido a Tu Inventario Viewer");
         bg.add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
 
-        boton2.setForeground(new java.awt.Color(255, 255, 255));
-        boton2.setText("Login");
-        boton2.setFont(new java.awt.Font("Poppins SemiBold", 0, 15)); // NOI18N
-        boton2.setPreferredSize(new java.awt.Dimension(82, 33));
-        boton2.setRadius(20);
-        boton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_login.setForeground(new java.awt.Color(255, 255, 255));
+        btn_login.setText("Login");
+        btn_login.setFont(new java.awt.Font("Poppins SemiBold", 0, 15)); // NOI18N
+        btn_login.setPreferredSize(new java.awt.Dimension(82, 33));
+        btn_login.setRadius(20);
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton2ActionPerformed(evt);
+                btn_loginActionPerformed(evt);
             }
         });
-        bg.add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 90, -1));
+        bg.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 283, 90, 40));
+
+        dieldpass.setBackground(new java.awt.Color(204, 204, 204));
+        dieldpass.setForeground(new java.awt.Color(0, 0, 0));
+        dieldpass.setText("Password");
+        dieldpass.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        dieldpass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
+        dieldpass.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dieldpassMouseClicked(evt);
+            }
+        });
+        dieldpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dieldpassActionPerformed(evt);
+            }
+        });
+        bg.add(dieldpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 280, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,39 +131,55 @@ public class Logeo extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jERoundTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jERoundTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jERoundTextField1ActionPerformed
-
-    private void jERoundTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jERoundTextField2ActionPerformed
-        
-    }//GEN-LAST:event_jERoundTextField2ActionPerformed
+    private void fielduserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fielduserActionPerformed
+    fielduser.setText(null);
+    }//GEN-LAST:event_fielduserActionPerformed
 
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+            Crear cr = new Crear();
+            cr.setVisible(true);
+            this.dispose();
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_boton1ActionPerformed
 
-    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_boton2ActionPerformed
+    }//GEN-LAST:event_btn_loginActionPerformed
+
+    private void dieldpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dieldpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpassActionPerformed
+
+    private void fielduserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fielduserMouseClicked
+       fielduser.setText("");
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fielduserMouseClicked
+
+    private void dieldpassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dieldpassMouseClicked
+        dieldpass.setText("");
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dieldpassMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private controlador.Boton boton1;
-    private controlador.Boton boton2;
     private javax.swing.JLabel boximg;
+    private controlador.Boton btn_login;
+    private controlador.JERoundPassField dieldpass;
+    private controlador.JERoundTextField fielduser;
     private javax.swing.JLabel header;
     private javax.swing.JLabel header1;
-    private controlador.JERoundTextField jERoundTextField1;
-    private controlador.JERoundTextField jERoundTextField2;
     private javax.swing.JLabel txtLOGIN;
     // End of variables declaration//GEN-END:variables
 }
