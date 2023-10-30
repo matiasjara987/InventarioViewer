@@ -12,8 +12,9 @@ public class Crear extends javax.swing.JFrame {
          this.setLocationRelativeTo(this);
          rsscalelabel.RSScaleLabel.setScaleLabel(boximg, "src/img/box_1.png");
      JTextField field = new TextField(15);
+     this.OCULTO.setVisible(false);
+     this.OCULTOC.setVisible(false);
      
-    this.add(field);
     this.setVisible(true);
     }
 
@@ -34,9 +35,13 @@ public class Crear extends javax.swing.JFrame {
         fieldusername = new diseño.JERoundTextField();
         fieldApellido2 = new diseño.JERoundTextField();
         dieldpass1 = new diseño.JERoundPassField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        dieldpass2 = new diseño.JERoundPassField();
+        lbl_crearcontra = new javax.swing.JLabel();
+        lbl_confirmarpass = new javax.swing.JLabel();
+        ConfirmarPass = new diseño.JERoundPassField();
+        VER = new javax.swing.JLabel();
+        OCULTO = new javax.swing.JLabel();
+        OCULTOC = new javax.swing.JLabel();
+        VERC = new javax.swing.JLabel();
         boximg = new javax.swing.JLabel();
         bgfont = new javax.swing.JLabel();
 
@@ -194,26 +199,54 @@ public class Crear extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Crear Contraseña");
+        lbl_crearcontra.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        lbl_crearcontra.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_crearcontra.setText("Crear Contraseña");
 
-        jLabel4.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Confirmar Contraseña");
+        lbl_confirmarpass.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        lbl_confirmarpass.setForeground(new java.awt.Color(0, 0, 0));
+        lbl_confirmarpass.setText("Confirmar Contraseña");
 
-        dieldpass2.setBackground(new java.awt.Color(204, 204, 204));
-        dieldpass2.setForeground(new java.awt.Color(0, 0, 0));
-        dieldpass2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        dieldpass2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
-        dieldpass2.addMouseListener(new java.awt.event.MouseAdapter() {
+        ConfirmarPass.setBackground(new java.awt.Color(204, 204, 204));
+        ConfirmarPass.setForeground(new java.awt.Color(0, 0, 0));
+        ConfirmarPass.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        ConfirmarPass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/password.png"))); // NOI18N
+        ConfirmarPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dieldpass2MouseClicked(evt);
+                ConfirmarPassMouseClicked(evt);
             }
         });
-        dieldpass2.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmarPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dieldpass2ActionPerformed(evt);
+                ConfirmarPassActionPerformed(evt);
+            }
+        });
+
+        VER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ver.png"))); // NOI18N
+        VER.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VERMouseClicked(evt);
+            }
+        });
+
+        OCULTO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/oculto.png"))); // NOI18N
+        OCULTO.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OCULTOMouseClicked(evt);
+            }
+        });
+
+        OCULTOC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/oculto.png"))); // NOI18N
+        OCULTOC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OCULTOCMouseClicked(evt);
+            }
+        });
+
+        VERC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ver.png"))); // NOI18N
+        VERC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VERCMouseClicked(evt);
             }
         });
 
@@ -231,15 +264,10 @@ public class Crear extends javax.swing.JFrame {
                                 .addGap(13, 13, 13))
                             .addComponent(header1, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
+                                .addGap(44, 44, 44)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fieldusername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(fieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -248,23 +276,38 @@ public class Crear extends javax.swing.JFrame {
                                         .addComponent(fieldNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(fieldrut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(fieldemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(fieldusername, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(38, 38, 38))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(15, 15, 15)
-                                        .addComponent(dieldpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel4))
-                                .addGap(48, 48, 48))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(btn_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(146, 146, 146)
-                        .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel2)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                                        .addGap(38, 38, 38)
+                                        .addComponent(jLabel1))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(79, 79, 79)
+                                        .addComponent(btn_atras, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(146, 146, 146)
+                                        .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(29, 29, 29)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lbl_crearcontra)
+                                            .addComponent(lbl_confirmarpass)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(ConfirmarPass, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(OCULTO)
+                                                    .addComponent(VER)
+                                                    .addComponent(OCULTOC)
+                                                    .addComponent(VERC))))))
+                                .addGap(0, 76, Short.MAX_VALUE)))
+                        .addGap(69, 69, 69)))
+                .addGap(102, 102, 102))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,19 +330,25 @@ public class Crear extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(fieldusername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
-                .addComponent(jLabel2)
-                .addGap(1, 1, 1)
-                .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_crearcontra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(1, 1, 1)
-                .addComponent(dieldpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(dieldpass1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(OCULTO)
+                        .addComponent(VER)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbl_confirmarpass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_sig, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addComponent(btn_atras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(ConfirmarPass, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_sig, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_atras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(OCULTOC)
+                    .addComponent(VERC))
                 .addGap(36, 36, 36))
         );
 
@@ -318,7 +367,7 @@ public class Crear extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 956, Short.MAX_VALUE)
+            .addComponent(bg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,15 +452,49 @@ public class Crear extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dieldpass1ActionPerformed
 
-    private void dieldpass2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dieldpass2MouseClicked
+    private void ConfirmarPassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConfirmarPassMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_dieldpass2MouseClicked
+    }//GEN-LAST:event_ConfirmarPassMouseClicked
 
-    private void dieldpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dieldpass2ActionPerformed
+    private void ConfirmarPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarPassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dieldpass2ActionPerformed
+    }//GEN-LAST:event_ConfirmarPassActionPerformed
+
+    private void VERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERMouseClicked
+    OCULTO.setVisible(true);
+    VER.setVisible(false);
+     dieldpass1.setEchoChar((char)0);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VERMouseClicked
+
+    private void OCULTOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTOMouseClicked
+        OCULTO.setVisible(false);
+    VER.setVisible(true);
+     dieldpass1.setEchoChar('*');
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OCULTOMouseClicked
+
+    private void OCULTOCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTOCMouseClicked
+ OCULTOC.setVisible(false);
+    VERC.setVisible(true);
+     ConfirmarPass.setEchoChar('*');
+        // TODO add your handling code here:
+    }//GEN-LAST:event_OCULTOCMouseClicked
+
+    private void VERCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERCMouseClicked
+       OCULTOC.setVisible(true);
+    VERC.setVisible(false);
+     ConfirmarPass.setEchoChar((char)0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VERCMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private diseño.JERoundPassField ConfirmarPass;
+    private javax.swing.JLabel OCULTO;
+    private javax.swing.JLabel OCULTOC;
+    private javax.swing.JLabel VER;
+    private javax.swing.JLabel VERC;
     private javax.swing.JPanel bg;
     private javax.swing.JLabel bgfont;
     private javax.swing.JLabel boximg;
@@ -419,7 +502,6 @@ public class Crear extends javax.swing.JFrame {
     private diseño.Boton btn_sig;
     private javax.swing.JLabel creacuenta;
     private diseño.JERoundPassField dieldpass1;
-    private diseño.JERoundPassField dieldpass2;
     private diseño.JERoundTextField fieldApellido1;
     private diseño.JERoundTextField fieldApellido2;
     private diseño.JERoundTextField fieldNombre;
@@ -428,8 +510,8 @@ public class Crear extends javax.swing.JFrame {
     private diseño.JERoundTextField fieldusername;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbl_confirmarpass;
+    private javax.swing.JLabel lbl_crearcontra;
     // End of variables declaration//GEN-END:variables
 }
