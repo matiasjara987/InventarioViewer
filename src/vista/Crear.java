@@ -3,13 +3,15 @@ package vista;
 import diseño.TextField;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import modelo.Conexion;
 import modelo.Encoder;
 import modelo.Usuario;
 import modelo.UsuarioDao;
 import modelo.ValidarCorreo;
 
 public class Crear extends javax.swing.JFrame {
-
+    Conexion con = new Conexion(); 
+    Usuario user = new Usuario();
      Encoder enc = new Encoder();
      ValidarCorreo val = new ValidarCorreo();
      UsuarioDao userDao = new UsuarioDao();
@@ -22,6 +24,7 @@ public class Crear extends javax.swing.JFrame {
         JTextField field = new TextField(15);
         this.OCULTO.setVisible(false);
         this.OCULTOC.setVisible(false);
+        con.Conectar();
 
         this.setVisible(true);
     }
@@ -141,7 +144,7 @@ public class Crear extends javax.swing.JFrame {
 
         txtApellidoPaterno.setBackground(new java.awt.Color(217, 217, 217));
         txtApellidoPaterno.setForeground(new java.awt.Color(0, 0, 0));
-        txtApellidoPaterno.setText("Apellidos");
+        txtApellidoPaterno.setText("Apellido Paterno");
         txtApellidoPaterno.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         txtApellidoPaterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
         txtApellidoPaterno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,7 +181,7 @@ public class Crear extends javax.swing.JFrame {
 
         txtApellidoMaterno.setBackground(new java.awt.Color(217, 217, 217));
         txtApellidoMaterno.setForeground(new java.awt.Color(0, 0, 0));
-        txtApellidoMaterno.setText("Apellidos");
+        txtApellidoMaterno.setText("Apellido Materno");
         txtApellidoMaterno.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
         txtApellidoMaterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
         txtApellidoMaterno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -406,19 +409,23 @@ public class Crear extends javax.swing.JFrame {
             if (val.ValidarEmail(txtCorreo.getText().trim())) {
                 if (dieldpass1.getText().trim().equals(ConfirmarPass.getText().trim())) {
 
-                    Usuario user = new Usuario();
+                    
                     user.setNombre(txtNombre.getText());
                     user.setApellidoP(txtApellidoPaterno.getText());
                     user.setAppelidoM(txtApellidoMaterno.getText());
                     user.setContraseña(enc.ecnode(dieldpass1.getText()));
                     user.setUsuario(txtUsuario.getText());
                     user.setEmail(txtCorreo.getText());
+                    user.setRut(txtRut.getText());
                     if (userDao.AddUser(user)) {
                         JOptionPane.showMessageDialog(null, "Alta usuario exitosa!");
                         Logeo log = new Logeo();
                         log.setVisible(true);
                         this.dispose();
                     }
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "las contraseñas deben ser iguales");
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "El correo es inválido");

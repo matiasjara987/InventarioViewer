@@ -34,8 +34,7 @@ PreparedStatement ps;
     public boolean AddUser(Usuario usuario) {
         PreparedStatement ps;
         Connection con = Conectar();
-        String sql = "INSERT INTO usuario(nombre, apellidoM, apellidoP, rut, email, usuario, contraseña)"
-                + "VALUES(?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO usuario(nombre, apellidoM, apellidoP, rut, email, usuario, contraseña) VALUES(?, ?,?,?,?,?,?)";
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, usuario.getNombre());
