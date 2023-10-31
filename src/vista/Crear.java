@@ -1,21 +1,29 @@
 package vista;
 
 import diseño.TextField;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
-
+import modelo.Encoder;
+import modelo.Usuario;
+import modelo.UsuarioDao;
+import modelo.ValidarCorreo;
 
 public class Crear extends javax.swing.JFrame {
 
+     Encoder enc = new Encoder();
+     ValidarCorreo val = new ValidarCorreo();
+     UsuarioDao userDao = new UsuarioDao();
+
     public Crear() {
         initComponents();
-         this.setLocationRelativeTo(this);
-         rsscalelabel.RSScaleLabel.setScaleLabel(boximg, "src/img/box_1.png");
-     JTextField field = new TextField(15);
-     this.OCULTO.setVisible(false);
-     this.OCULTOC.setVisible(false);
-     
-    this.setVisible(true);
+
+        this.setLocationRelativeTo(this);
+        rsscalelabel.RSScaleLabel.setScaleLabel(boximg, "src/img/box_1.png");
+        JTextField field = new TextField(15);
+        this.OCULTO.setVisible(false);
+        this.OCULTOC.setVisible(false);
+
+        this.setVisible(true);
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -25,15 +33,15 @@ public class Crear extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         creacuenta = new javax.swing.JLabel();
         header1 = new javax.swing.JLabel();
-        fieldemail = new diseño.JERoundTextField();
-        fieldNombre = new diseño.JERoundTextField();
-        fieldrut = new diseño.JERoundTextField();
+        txtCorreo = new diseño.JERoundTextField();
+        txtNombre = new diseño.JERoundTextField();
+        txtRut = new diseño.JERoundTextField();
         btn_sig = new diseño.Boton();
         btn_atras = new diseño.Boton();
-        fieldApellido1 = new diseño.JERoundTextField();
+        txtApellidoPaterno = new diseño.JERoundTextField();
         jLabel1 = new javax.swing.JLabel();
-        fieldusername = new diseño.JERoundTextField();
-        fieldApellido2 = new diseño.JERoundTextField();
+        txtUsuario = new diseño.JERoundTextField();
+        txtApellidoMaterno = new diseño.JERoundTextField();
         dieldpass1 = new diseño.JERoundPassField();
         lbl_crearcontra = new javax.swing.JLabel();
         lbl_confirmarpass = new javax.swing.JLabel();
@@ -63,51 +71,51 @@ public class Crear extends javax.swing.JFrame {
         header1.setForeground(new java.awt.Color(0, 0, 0));
         header1.setText("Bienvenido a Tu Inventario Viewer");
 
-        fieldemail.setBackground(new java.awt.Color(217, 217, 217));
-        fieldemail.setForeground(new java.awt.Color(0, 0, 0));
-        fieldemail.setText("Correo electrónico");
-        fieldemail.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldemail.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mail.png"))); // NOI18N
-        fieldemail.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtCorreo.setBackground(new java.awt.Color(217, 217, 217));
+        txtCorreo.setForeground(new java.awt.Color(0, 0, 0));
+        txtCorreo.setText("Correo electrónico");
+        txtCorreo.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtCorreo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mail.png"))); // NOI18N
+        txtCorreo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldemailMouseClicked(evt);
+                txtCorreoMouseClicked(evt);
             }
         });
-        fieldemail.addActionListener(new java.awt.event.ActionListener() {
+        txtCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldemailActionPerformed(evt);
+                txtCorreoActionPerformed(evt);
             }
         });
 
-        fieldNombre.setBackground(new java.awt.Color(217, 217, 217));
-        fieldNombre.setForeground(new java.awt.Color(0, 0, 0));
-        fieldNombre.setText("Nombre");
-        fieldNombre.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        fieldNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtNombre.setBackground(new java.awt.Color(217, 217, 217));
+        txtNombre.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombre.setText("Nombre");
+        txtNombre.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldNombreMouseClicked(evt);
+                txtNombreMouseClicked(evt);
             }
         });
-        fieldNombre.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldNombreActionPerformed(evt);
+                txtNombreActionPerformed(evt);
             }
         });
 
-        fieldrut.setBackground(new java.awt.Color(217, 217, 217));
-        fieldrut.setForeground(new java.awt.Color(0, 0, 0));
-        fieldrut.setText("RUT");
-        fieldrut.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldrut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet.png"))); // NOI18N
-        fieldrut.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtRut.setBackground(new java.awt.Color(217, 217, 217));
+        txtRut.setForeground(new java.awt.Color(0, 0, 0));
+        txtRut.setText("RUT");
+        txtRut.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtRut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/carnet.png"))); // NOI18N
+        txtRut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldrutMouseClicked(evt);
+                txtRutMouseClicked(evt);
             }
         });
-        fieldrut.addActionListener(new java.awt.event.ActionListener() {
+        txtRut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldrutActionPerformed(evt);
+                txtRutActionPerformed(evt);
             }
         });
 
@@ -131,19 +139,19 @@ public class Crear extends javax.swing.JFrame {
             }
         });
 
-        fieldApellido1.setBackground(new java.awt.Color(217, 217, 217));
-        fieldApellido1.setForeground(new java.awt.Color(0, 0, 0));
-        fieldApellido1.setText("Apellidos");
-        fieldApellido1.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldApellido1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        fieldApellido1.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtApellidoPaterno.setBackground(new java.awt.Color(217, 217, 217));
+        txtApellidoPaterno.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoPaterno.setText("Apellidos");
+        txtApellidoPaterno.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtApellidoPaterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        txtApellidoPaterno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldApellido1MouseClicked(evt);
+                txtApellidoPaternoMouseClicked(evt);
             }
         });
-        fieldApellido1.addActionListener(new java.awt.event.ActionListener() {
+        txtApellidoPaterno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldApellido1ActionPerformed(evt);
+                txtApellidoPaternoActionPerformed(evt);
             }
         });
 
@@ -152,35 +160,35 @@ public class Crear extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Datos Personales");
 
-        fieldusername.setBackground(new java.awt.Color(217, 217, 217));
-        fieldusername.setForeground(new java.awt.Color(0, 0, 0));
-        fieldusername.setText("Username");
-        fieldusername.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldusername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        fieldusername.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtUsuario.setBackground(new java.awt.Color(217, 217, 217));
+        txtUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsuario.setText("Username");
+        txtUsuario.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldusernameMouseClicked(evt);
+                txtUsuarioMouseClicked(evt);
             }
         });
-        fieldusername.addActionListener(new java.awt.event.ActionListener() {
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldusernameActionPerformed(evt);
+                txtUsuarioActionPerformed(evt);
             }
         });
 
-        fieldApellido2.setBackground(new java.awt.Color(217, 217, 217));
-        fieldApellido2.setForeground(new java.awt.Color(0, 0, 0));
-        fieldApellido2.setText("Apellidos");
-        fieldApellido2.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
-        fieldApellido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
-        fieldApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtApellidoMaterno.setBackground(new java.awt.Color(217, 217, 217));
+        txtApellidoMaterno.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidoMaterno.setText("Apellidos");
+        txtApellidoMaterno.setFont(new java.awt.Font("Poppins Light", 0, 14)); // NOI18N
+        txtApellidoMaterno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        txtApellidoMaterno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldApellido2MouseClicked(evt);
+                txtApellidoMaternoMouseClicked(evt);
             }
         });
-        fieldApellido2.addActionListener(new java.awt.event.ActionListener() {
+        txtApellidoMaterno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldApellido2ActionPerformed(evt);
+                txtApellidoMaternoActionPerformed(evt);
             }
         });
 
@@ -270,14 +278,14 @@ public class Crear extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(fieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(fieldApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(fieldNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(fieldrut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(fieldemail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtRut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(fieldusername, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(38, 38, 38))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -318,17 +326,17 @@ public class Crear extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fieldApellido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(fieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidoMaterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldrut, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRut, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(fieldemail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fieldusername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addComponent(lbl_crearcontra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -379,70 +387,97 @@ public class Crear extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldemailActionPerformed
+    private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldemailActionPerformed
+    }//GEN-LAST:event_txtCorreoActionPerformed
 
-    private void fieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNombreActionPerformed
-        
-    }//GEN-LAST:event_fieldNombreActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
 
-    private void fieldrutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldrutActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void txtRutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldrutActionPerformed
+    }//GEN-LAST:event_txtRutActionPerformed
 
     private void btn_sigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_sigActionPerformed
-       Confirmar cr = new Confirmar();
+        if (!txtNombre.getText().trim().equals("") && !txtApellidoPaterno.getText().trim().equals("") && !txtApellidoMaterno.getText().trim().equals("")
+                && !txtCorreo.getText().trim().equals("") && !txtUsuario.getText().trim().equals("") && !txtRut.getText().trim().equals("")
+                && !dieldpass1.getText().trim().equals("") && !ConfirmarPass.getText().trim().equals("")) {
+            if (val.ValidarEmail(txtCorreo.getText().trim())) {
+                if (dieldpass1.getText().trim().equals(ConfirmarPass.getText().trim())) {
+
+                    Usuario user = new Usuario();
+                    user.setNombre(txtNombre.getText());
+                    user.setApellidoP(txtApellidoPaterno.getText());
+                    user.setAppelidoM(txtApellidoMaterno.getText());
+                    user.setContraseña(enc.ecnode(dieldpass1.getText()));
+                    user.setUsuario(txtUsuario.getText());
+                    user.setEmail(txtCorreo.getText());
+                    if (userDao.AddUser(user)) {
+                        JOptionPane.showMessageDialog(null, "Alta usuario exitosa!");
+                        Logeo log = new Logeo();
+                        log.setVisible(true);
+                        this.dispose();
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "El correo es inválido");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Llena todos los campos");
+        }
+        /* Confirmar cr = new Confirmar();
        cr.setVisible(true);
-        this.dispose();
+        this.dispose(); */
+
     }//GEN-LAST:event_btn_sigActionPerformed
 
-    private void fieldNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldNombreMouseClicked
-        fieldNombre.setText("");
+    private void txtNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMouseClicked
+        txtNombre.setText("");
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldNombreMouseClicked
+    }//GEN-LAST:event_txtNombreMouseClicked
 
-    private void fieldrutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldrutMouseClicked
-        fieldrut.setText("");
+    private void txtRutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtRutMouseClicked
+        txtRut.setText("");
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldrutMouseClicked
+    }//GEN-LAST:event_txtRutMouseClicked
 
-    private void fieldemailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldemailMouseClicked
-        fieldemail.setText("");
+    private void txtCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCorreoMouseClicked
+        txtCorreo.setText("");
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldemailMouseClicked
+    }//GEN-LAST:event_txtCorreoMouseClicked
 
     private void btn_atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_atrasActionPerformed
-    Logeo log = new Logeo();
-    log.setVisible(true);
-    this.dispose();
- // TODO add your handling code here:
+        Logeo log = new Logeo();
+        log.setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
     }//GEN-LAST:event_btn_atrasActionPerformed
 
-    private void fieldApellido1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldApellido1MouseClicked
+    private void txtApellidoPaternoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoPaternoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellido1MouseClicked
+    }//GEN-LAST:event_txtApellidoPaternoMouseClicked
 
-    private void fieldApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellido1ActionPerformed
+    private void txtApellidoPaternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoPaternoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellido1ActionPerformed
+    }//GEN-LAST:event_txtApellidoPaternoActionPerformed
 
-    private void fieldusernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldusernameMouseClicked
-        fieldusername.setText("");
+    private void txtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseClicked
+        txtUsuario.setText("");
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldusernameMouseClicked
+    }//GEN-LAST:event_txtUsuarioMouseClicked
 
-    private void fieldusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldusernameActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
 
-    }//GEN-LAST:event_fieldusernameActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
-    private void fieldApellido2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldApellido2MouseClicked
+    private void txtApellidoMaternoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoMaternoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellido2MouseClicked
+    }//GEN-LAST:event_txtApellidoMaternoMouseClicked
 
-    private void fieldApellido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldApellido2ActionPerformed
+    private void txtApellidoMaternoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoMaternoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldApellido2ActionPerformed
+    }//GEN-LAST:event_txtApellidoMaternoActionPerformed
 
     private void dieldpass1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dieldpass1MouseClicked
         // TODO add your handling code here:
@@ -461,31 +496,31 @@ public class Crear extends javax.swing.JFrame {
     }//GEN-LAST:event_ConfirmarPassActionPerformed
 
     private void VERMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERMouseClicked
-    OCULTO.setVisible(true);
-    VER.setVisible(false);
-     dieldpass1.setEchoChar((char)0);
-        
+        OCULTO.setVisible(true);
+        VER.setVisible(false);
+        dieldpass1.setEchoChar((char) 0);
+
         // TODO add your handling code here:
     }//GEN-LAST:event_VERMouseClicked
 
     private void OCULTOMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTOMouseClicked
         OCULTO.setVisible(false);
-    VER.setVisible(true);
-     dieldpass1.setEchoChar('*');
+        VER.setVisible(true);
+        dieldpass1.setEchoChar('*');
         // TODO add your handling code here:
     }//GEN-LAST:event_OCULTOMouseClicked
 
     private void OCULTOCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OCULTOCMouseClicked
- OCULTOC.setVisible(false);
-    VERC.setVisible(true);
-     ConfirmarPass.setEchoChar('*');
+        OCULTOC.setVisible(false);
+        VERC.setVisible(true);
+        ConfirmarPass.setEchoChar('*');
         // TODO add your handling code here:
     }//GEN-LAST:event_OCULTOCMouseClicked
 
     private void VERCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VERCMouseClicked
-       OCULTOC.setVisible(true);
-    VERC.setVisible(false);
-     ConfirmarPass.setEchoChar((char)0);
+        OCULTOC.setVisible(true);
+        VERC.setVisible(false);
+        ConfirmarPass.setEchoChar((char) 0);
         // TODO add your handling code here:
     }//GEN-LAST:event_VERCMouseClicked
 
@@ -502,16 +537,16 @@ public class Crear extends javax.swing.JFrame {
     private diseño.Boton btn_sig;
     private javax.swing.JLabel creacuenta;
     private diseño.JERoundPassField dieldpass1;
-    private diseño.JERoundTextField fieldApellido1;
-    private diseño.JERoundTextField fieldApellido2;
-    private diseño.JERoundTextField fieldNombre;
-    private diseño.JERoundTextField fieldemail;
-    private diseño.JERoundTextField fieldrut;
-    private diseño.JERoundTextField fieldusername;
     private javax.swing.JLabel header1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbl_confirmarpass;
     private javax.swing.JLabel lbl_crearcontra;
+    private diseño.JERoundTextField txtApellidoMaterno;
+    private diseño.JERoundTextField txtApellidoPaterno;
+    private diseño.JERoundTextField txtCorreo;
+    private diseño.JERoundTextField txtNombre;
+    private diseño.JERoundTextField txtRut;
+    private diseño.JERoundTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,7 +12,7 @@ public class Encoder {
 
     String secretKey = "SoftwareSwing";
 
-    public String ecnode(String secretKey, String cadena) {
+    public String ecnode(String cadena) {
         String encriptacion = "";
         try {
             MessageDigest md5 = MessageDigest.getInstance("MD5");
@@ -33,7 +33,7 @@ public class Encoder {
         return encriptacion;
     } // fin metodo
 
-    public String decnode(String secretKey, String cadenaEncriptada) {
+    public String decnode(String secretKey,String cadenaEncriptada) {
         String desencriptacion = "";
         try {
             byte[] message = Base64.decodeBase64(cadenaEncriptada.getBytes("utf-8"));
