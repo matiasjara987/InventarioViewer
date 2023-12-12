@@ -1,25 +1,26 @@
+
 package modelo;
-
 import java.sql.*;
-import java.sql.DriverManager;
 
-public class conexion {
-
+public class Conexion {    
     Connection con;
-    String url = "jdbc:mysql://localhost:3306/software?useSSL=false&useTimezone=true&serverTimezone=UTC";
-    String user = "root";
-    String Pass = "admin";
-
-    public Connection Conectar() {
+    private static final String URL = "jdbc:mysql://localhost:3306/software";
+    private static final String USER = "root";
+    private static final String PASSWORD ="admin";
+    
+    public Connection Conectar(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, user, Pass);
-
-
-        } catch (SQLException | ClassNotFoundException ex) {
-            ex.printStackTrace(System.out); 
+            con= DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Conexion exitosa");
+        } catch (Exception e){
+            System.out.println("error en conectar");
+           System.out.println("Ocurrio un error:" +e.getMessage()); 
         }
         return con;
-
-    }
-}
+    } //fin metodo 
+    
+    
+    
+    
+} //fin class conexion
